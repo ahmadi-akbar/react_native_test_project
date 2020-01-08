@@ -12,6 +12,8 @@ const TabNav = createBottomTabNavigator(
   },
   {
     tabBarOptions: {
+      activeTintColor: 'black',
+      activeBackgroundColor: 'red',
       showLabel: false,
       style: {
         paddingHorizontal: 30,
@@ -22,7 +24,7 @@ const TabNav = createBottomTabNavigator(
   },
 );
 
-const ScreenNav = createStackNavigator(
+const StackNav = createStackNavigator(
   {
     Home: Screens.Home,
     Tabs: TabNav,
@@ -34,4 +36,4 @@ const ScreenNav = createStackNavigator(
   },
 );
 
-export default createAppContainer(ScreenNav);
+export default createAppContainer(StackNav);
